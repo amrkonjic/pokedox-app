@@ -1,0 +1,10 @@
+.title {
+  color: #3498db;
+  text-transform: capitalize;
+}
+
+.info {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+}

@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+}
+
+main {
+  padding: 20px;
+}
+
+h1 {
+  color: #ff0000;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.plaviTekst {
+  color: #2048ca;
+}
+
+.info {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
