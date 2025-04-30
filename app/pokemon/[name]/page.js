@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+
 import Image from "next/image";
 import NotFound from "@/app/not-found";
 
@@ -19,9 +19,10 @@ export default async function PokemonDetalji({ params }) {
   }
 
   return (
-    <main className="flex flex-col items-center mt-10 p-4 bg-lime-300">
-      <h1 className={styles.title}>{data.name}</h1>
-      <div style={{ position: 'relative', width: '100%', height: '300px' }}>
+    <main className="flex flex-col items-center mt-4 bg-white rounded-2xl shadow-2xl w-full max-w-md h-[550px]">
+      
+      <h1 className="text-4xl font-bold text-blue-900 capitalize mb-6">{data.name}</h1>
+      <div className="relative w-40 h-40 mb-4">
         <Image
           src={spriteUrl}
           alt={data.name}
@@ -30,9 +31,19 @@ export default async function PokemonDetalji({ params }) {
           style={{ objectFit: 'contain' }}
         />
       </div>
-      <p className="plaviTekst">ID: {data.id}</p>
-      <p>Težina: {data.weight}</p>
-      <p>Visina: {data.height}</p>
+      <br />
+      <div className="p-4 flex flex-col gap-3 bg-blue-100 rounded-2xl shadow-blue-900">
+        <p>ID: {data.id}</p>
+        <p>Weight: {data.weight}</p>
+        <p>Height: {data.height}</p>
+        
+        <p>Types: {data.types.map(t => t.type.name).join(', ')}</p>
+        <p>Abilities: {data.abilities.map(a => a.ability.name).join(', ')}</p>
+        <p>Base XP: {data.base_experience}</p>
+      </div>
+      
+      
+
     </main>
   );
 }
