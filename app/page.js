@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo from "@/public/poke_logo.webp";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -23,6 +24,11 @@ export default function Home() {
             You can also browse the complete list of Pokémon, learn about their types and characteristics, and enjoy a simple and intuitive Pokédex experience.
           </p>
         </section>
+
+        <div className="bg-blue-700 hover:bg-blue-800 text-white p-5 mt-6 rounded-2xl shadow-lg">
+          <Link href="/pokemon/page/1">All pokemons</Link>
+        </div>
+        
       </main>
   );
 }
